@@ -1,0 +1,38 @@
+# ===== 環境変数 / シークレット =====
+# .env には ANTHROPIC_API_KEY が入るためコミットしない（.env.sample のみ追跡）
+.env
+.env.local
+.env.*.local
+
+# ===== setup.sh が drupal イメージから生成するファイル =====
+# web/ 配下（themes / modules / sites）はイメージから展開される生成物
+/web/
+# composer.json / composer.lock も setup.sh が毎回イメージから上書き生成する
+/composer.json
+/composer.lock
+# コンテナ内で composer install される依存（念のため）
+/vendor/
+
+# ===== Drupal の設定同期ディレクトリ（マウント）=====
+/config/
+
+# ===== MySQL / MariaDB のデータ・ダンプ（バインドマウント）=====
+/mysql/
+
+# ===== Drupal の機密 / ランタイムファイル（万一 web/ を追跡する場合の保険）=====
+sites/*/settings.php
+sites/*/settings.local.php
+sites/*/services*.yml
+sites/*/files/
+sites/*/private/
+
+# ===== OS / エディタ =====
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# ===== ログ =====
+*.log
