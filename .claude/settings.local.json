@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker compose *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8080/)",
+      "Bash(curl -s http://localhost:8080/)",
+      "Bash(curl -s -o /dev/null -w \"base.css -> %{http_code}\\\\n\" http://localhost:8080/themes/custom/event_theme/css/base.css)",
+      "Bash(curl *)",
+      "WebFetch(domain:www.grust.co.jp)",
+      "Bash(find . -type f '\\(' -iname *.svg -o -iname *.png -o -iname *.jpg -o -iname *.jpeg -o -iname *.webp -o -iname *.gif -o -iname *.avif '\\)' -not -path */vendor/* -not -path */node_modules/* -not -path */core/* -not -path */.git/* -printf '%TY-%Tm-%Td %TH:%TM %p\\\\n')",
+      "Bash(rm -f web/themes/custom/event_theme/_trim_logo.php)",
+      "Bash(mkdir -p web/modules/custom/marche/images/_source)",
+      "Bash(mv \"web/modules/custom/marche/images/gallery/260512火1712_NARATIVE_2606マルシェ_ロゴ_デフォルト \\(1\\).png\" \"web/modules/custom/marche/images/_source/logo-original.png\")",
+      "Bash(find . -type f '\\(' -iname *.svg -o -iname *.png -o -iname *.jpg -o -iname *.jpeg -o -iname *.webp -o -iname *.gif -o -iname *.avif '\\)' -not -path */vendor/* -not -path */node_modules/* -not -path */core/* -not -path */.git/* -not -path */_source/* -printf '%TY-%Tm-%Td %TH:%TM %10s %p\\\\n')",
+      "Bash(find . -type f '\\(' -iname *.pdf -o -iname *.docx -o -iname *.doc -o -iname *.txt -o -iname *.md -o -iname *.rtf -o -iname *.pptx -o -iname *.key -o -iname *.pages -o -iname *.csv -o -iname *.xlsx '\\)' -not -path */vendor/* -not -path */node_modules/* -not -path */core/* -not -path */.git/* -printf '%TY-%Tm-%Td %TH:%TM %10s %p\\\\n')",
+      "Bash(find . -type f -not -path */vendor/* -not -path */node_modules/* -not -path */core/* -not -path */.git/* -not -path */web/core/* -printf '%TY-%Tm-%Td %TH:%TM %10s %p\\\\n')",
+      "Bash(mkdir -p _private)",
+      "Bash(mv \"web/modules/custom/marche/images/gallery/260607日1322_NARATIVE_2606イベント_開催報告書_内部資料 - Google ドキュメント.pdf\" \"_private/\")"
+    ]
+  }
+}
